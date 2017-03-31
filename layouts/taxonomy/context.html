@@ -21,7 +21,7 @@
             <ul>
                 {{ range .Data.Pages.GroupByParam "type" }}
                     {{ range .Pages }}
-                        <li><a href="#{{ .RelPermalink }}">{{ .Title }}</a></li>
+                        <li><a href="{{ printf "#%s" (.RelPermalink }}">{{ .Title }}</a></li>
                     {{ end }}
                 {{ end }}
             </ul>

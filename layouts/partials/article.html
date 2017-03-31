@@ -2,7 +2,7 @@
     <div class="article-inner">
         {{ if .Title }}
         <header class="article-header">
-          <h1 class="article-title" itemprop="name" id="{{ .RelPermalink }}">
+          <h1 class="article-title" itemprop="name" id="{{ .RelPermalink | urlize }}">
             <a href="{{ .RelPermalink }}"><i class="fa fa-link fa-1" aria-hidden="true"></i></a>
             {{ .Title }}
           </h1>

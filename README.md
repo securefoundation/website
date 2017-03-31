@@ -29,4 +29,6 @@ $ hugo server
 
 We can build the static site to a destination directory like so:
 
+```
 $ hugo -d ~/securefoundation.github.io
+```

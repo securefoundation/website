@@ -5,11 +5,29 @@
 <body>
   <div id="container">
     {{ partial "header.html" (dict "Site" .Site "subtitle" $context) }}
+
+
+    
     
     <section id="main" class="outer">
       <section class="layout-wrap">
 
+    
         <div class="layout-wrap-inner">
+          
+          <div class="context-toc">
+            <h3>Contents</h3>
+            <nav>
+            <ul>
+                {{ range .Data.Pages.GroupByParam "type" }}
+                    {{ range .Pages }}
+                        <li><a href="#{{ .RelPermalink }}">{{ .Title }}</a></li>
+                    {{ end }}
+                {{ end }}
+            </ul>
+            </nav>
+        </div>
+          
           <ul>
             {{ range .Data.Pages.GroupByParam "type" }}
                 {{ range .Pages }}

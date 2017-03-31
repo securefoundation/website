@@ -16,3 +16,17 @@ for JSX syntax highlighting with pygments.
 ```
 # pip install pygments-lexer-babylon
 ```
+
+## Hacking
+
+Hugo will run a local web server that automatically reloads based on changes to the source:
+
+```
+$ hugo server
+```
+
+## Building
+
+We can build the static site to a destination directory like so:
+
+$ hugo -d ~/securefoundation.github.io
